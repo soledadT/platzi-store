@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media (min-widht: 576px){
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+   }
+}

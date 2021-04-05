@@ -1,21 +1,20 @@
 import { fromEventPattern } from "rxjs";
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
     selector: "app-product",
-    templateUrl: "./product.component.html"
+    templateUrl: "./product.component.html",
+    styleUrls: ["./product.component.scss"],
 })
 
 export class ProductComponent {
 
-    product: Product =
-        {
-            id: '1',
-            image: 'assets/images/camiseta.png',
-            title: 'Camiseta',
-            price: 80000,
-            description: 'bla bla bla bla bla'
-        }
+    @Input() product: Product;
+    @Output() productClick: EventEmitter<number> = new EventEmitter();
+
+    addCart() {
+        this.productClick.emit(this.product.id);
+    }
 
 }
