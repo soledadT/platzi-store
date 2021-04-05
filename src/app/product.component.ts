@@ -12,6 +12,7 @@ export class ProductComponent {
 
     @Input() product: Product;
     @Output() productClick: EventEmitter<number> = new EventEmitter();
+    today = new Date();
 
     addCart() {
         this.productClick.emit(this.product.id);
