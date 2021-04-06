@@ -8,6 +8,7 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   title = 'platzi-store';
+  powel = 10;
 
   clickProduct(id: number) {
     console.log(id);
