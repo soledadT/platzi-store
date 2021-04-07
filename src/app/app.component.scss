@@ -10,7 +10,7 @@ body {
 }
 
 
-@media (min-widht: 576px){
+@media (min-width: 576px){
     .product-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
