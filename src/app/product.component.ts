@@ -11,7 +11,7 @@ import { Product } from './product.model';
 export class ProductComponent {
 
     @Input() product: Product;
-    @Output() productClick: EventEmitter<number> = new EventEmitter();
+    @Output() productClick: EventEmitter<string> = new EventEmitter();
 
     addCart() {
         this.productClick.emit(this.product.id);
