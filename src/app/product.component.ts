@@ -11,12 +11,12 @@ import { Product } from './product.model';
 export class ProductComponent {
 
     @Input() product: Product;
-<<<<<<< HEAD
+
     @Output() productClick: EventEmitter<string> = new EventEmitter();
-=======
-    @Output() productClick: EventEmitter<number> = new EventEmitter();
+
+
     today = new Date();
->>>>>>> pipe_branch
+
 
     addCart() {
         this.productClick.emit(this.product.id);
