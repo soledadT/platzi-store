@@ -1,30 +1,33 @@
-<table mat-table [(dataSource)]="products" class="mat-elevation-z8 product-list">
+<button mat-raised-button routerLink="create">Crear Producto</button>
 
 
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID </th>
-      <td mat-cell *matCellDef="let product"> {{product.id}} </td>
-    </ng-container>
+<table mat-table [dataSource]="products" class="mat-elevation-z8 product-list">
 
-    <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef>TITLE</th>
-      <td mat-cell *matCellDef="let product"> {{product.title}} </td>
-    </ng-container>
-  
 
-    <ng-container matColumnDef="price">
-      <th mat-header-cell *matHeaderCellDef>PRICE </th>
-      <td mat-cell *matCellDef="let product"> {{product.price}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
-      <td mat-cell *matCellDef="let product"> 
-        <button mat-button color="primary">Editar</button>
-        <button mat-button color="warn" (click) = "deleteProduct(product.id)">Eliminar</button>
-      </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID </th>
+    <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>TITLE</th>
+    <td mat-cell *matCellDef="let product"> {{product.title}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef>PRICE </th>
+    <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
+    <td mat-cell *matCellDef="let product">
+      <button mat-button color="primary" [routerLink]="['edit', product.id]">Editar</button>
+      <button mat-button color="warn" (click)="deleteProduct(product.id)">Eliminar</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

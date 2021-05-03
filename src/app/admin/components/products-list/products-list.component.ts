@@ -25,7 +25,7 @@ export class ProductsListComponent implements OnInit {
 
   deleteProduct(id: string) {
     this.productService.deleteProduct(id).subscribe(rta => {
-      this.products.splice(id);
+      this.fetchProduct()
     })
   }
 

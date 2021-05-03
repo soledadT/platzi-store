@@ -10,13 +10,17 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { DashboardHomeComponent } from './components/dashboard-home/dashboard-home.component';
 import { ProductTableComponent } from './components/product-table/product-table.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
+import { FormEditComponent } from './components/form-edit/form-edit.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
+import { FormRegistrationComponent } from './components/form-registration/form-registration.component';
 
 
 
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, DashboardHomeComponent, ProductTableComponent, ProductsListComponent],
+  declarations: [ProductFormComponent, NavComponent, DashboardHomeComponent, ProductTableComponent, ProductsListComponent, FormProductComponent, FormEditComponent, FormLoginComponent, FormRegistrationComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
