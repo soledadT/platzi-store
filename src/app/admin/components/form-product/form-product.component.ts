@@ -11,7 +11,6 @@ import { MyValidators } from '../../../utils/validators';
 })
 export class FormProductComponent implements OnInit {
   form: FormGroup;
-  colorFondo = '#ff0';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -54,8 +53,6 @@ export class FormProductComponent implements OnInit {
     return this.form.get('price');
   }
 
-  cambiarColor() {
-    this.colorFondo = '#E91E63';
-  }
+
 
 }
