@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductsService } from '../../../core/services/products/products.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { MyValidators } from '../../../utils/validators';
-import { Product } from '../../../product.model';
+
 
 
 @Component({

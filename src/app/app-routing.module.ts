@@ -7,6 +7,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductsComponent } from './products/products.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './admin.guard';
+import { FormRegistrationComponent } from './auth/form-registration/form-registration.component';
+import { FormLoginComponent } from './auth/form-login/form-login.component';
 
 const routes: Routes = [
   {
@@ -43,7 +45,16 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'login',
+    component: FormLoginComponent
+  },
+  {
+    path: 'registration',
+    component: FormRegistrationComponent
   },
   {
     path: '**',

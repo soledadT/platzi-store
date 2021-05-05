@@ -12,8 +12,8 @@ import { ProductTableComponent } from './components/product-table/product-table.
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
 import { FormEditComponent } from './components/form-edit/form-edit.component';
-import { FormLoginComponent } from './components/form-login/form-login.component';
-import { FormRegistrationComponent } from './components/form-registration/form-registration.component';
+import { FormLoginComponent } from '../auth/form-login/form-login.component';
+import { FormRegistrationComponent } from '../auth/form-registration/form-registration.component';
 
 
 
